@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  nextjs-dockerized:
+    ports:
+      - 3000:3000
+    build: .
+    container_name: nextjs-dockerized
+    domainname: services.local
+
+networks:
+  default:
+    name: local
+    external: true
